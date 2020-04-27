@@ -1,6 +1,6 @@
 # Site of Kharkov business review
 
-Тews site for Kharkov scientists and their research - khbr.in.ua
+News site for Kharkov scientists and their research - khbr.in.ua
 ## Getting Started
 
 * pip install -r requirements.txt
