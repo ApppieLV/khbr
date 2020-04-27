@@ -1,0 +1,40 @@
+.rating-detail {
+  margin: 5vh 0;
+  .rating-detail-publication-image {
+    img {
+      width: 100%;
+      height: 65vh;
+      border-radius: 10px;
+    }
+  }
+  .rating-detail-top {
+    .rating-detail-top-left_side {
+      .rating-detail-title {
+        font-size: 2em;
+        color:#303738;
+        &:hover {
+          color:#63808b;
+          transition: .4s;
+        }
+      }
+      .rating-detail-short-text {
+        font-size: 1.2em;
+        color:#303738;
+        margin: 2vh 0;
+        &:hover {
+          text-shadow: 1px 1px 1px #C9C9C9;
+          cursor: pointer;
+        }
+      }
+    }
+    .rating-detail-info {
+      display: flex;
+      margin: 2vh 0;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      color:#7A7A7A;
+      font-size: 1em;
+    }
+  }
+}

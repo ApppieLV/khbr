@@ -1,0 +1,10 @@
+/* Portrait tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .event-post-content-info {
+    flex-flow: column wrap;
+    text-align: left; } }
+
+/*# sourceMappingURL=event-index.css.map */

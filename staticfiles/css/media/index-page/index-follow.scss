@@ -1,0 +1,41 @@
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .index-follow {
+      .index-follow-title {
+        font-size: 1.4em;
+    }
+    .index-follow-box {
+      .index-follow-button {
+        width: 100%;
+        border-radius: 0;
+        border: none;
+      }
+      .index-follow-input {
+        padding-left: 0;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  }
+}
+

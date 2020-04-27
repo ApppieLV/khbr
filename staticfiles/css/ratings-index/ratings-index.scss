@@ -1,0 +1,52 @@
+.ratings-wrapper {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  .rating-post-box {
+    width: 100%;
+      .rating-post-title {
+        text-align: left;
+        font-size: 2em;
+        a {
+          color:#303738;
+          text-decoration: none;
+          &:hover {
+            transition: .4s;
+            color: #63808b;
+          }
+          &:focus {
+            color:#8b5d65;
+          }
+        }
+      }
+    .rating-post-image {
+      img {
+        width: 100%;
+        height: 55vh;
+        border-radius: 10px;
+      }
+    }
+    .rating-post-content {
+      p {
+        font-size: 1.4em;
+        color:#303738;
+        &:hover {
+          text-shadow: 1px 1px 1px #C9C9C9;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .analytics-box-info {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin: 2vh 0;
+      p {
+        font-size: 1em;
+        color:#7A7A7A;
+      }
+    }
+  }
+}

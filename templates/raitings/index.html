@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page_title-box">
+    <div class="page_title-top_line">
+    </div>
+    <div class="page_title-title">
+        <h1>Рейтинги</h1>
+    </div>
+    <div class="page_title-bottom_line">
+    </div>
+</div>
+<div class="container">
+    <section class="ratings-wrapper">
+        <div class="rating-post-box">
+            {% for raiting in list_rait %}
+            <div class="rating-post-title">
+                <a href="{% url 'raiting_detail' slug=raiting.slug %}" class="rating-post-title-link">
+                    {{ raiting.title }}
+                </a>
+            </div>
+            {% if raiting.image %}
+            <div class="rating-post-image">
+                <img src="{{ raiting.image.url }}" alt="">
+            </div>
+            {% endif %}
+            <div class="rating-post-content">
+                <p>{{ raiting.short_description|safe }}</p>
+                <div class="analytics-box-info">
+                    <p class="analytics-box-author"><i class="fa fa-user"></i>{{ raiting.author }}</p>
+                    <p class="analytics-box-time">{{ raiting.created }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+<!--<section class="pages-carousel">-->
+<!--    <div class="pages-carousel-button" id="prev">-->
+
+<!--        <div class="pages-carousel-top"></div>-->
+<!--        <button>Предыдущая</button>-->
+<!--        <div class="pages-carousel-bottom"></div>-->
+
+<!--    </div>-->
+<!--    <div class="pages-carousel-pages">-->
+<!--        <span class="pages-carousel-active">1</span>-->
+<!--        <span>2</span>-->
+<!--        <span>3</span>-->
+<!--        <span>4</span>-->
+<!--    </div>-->
+<!--    <div class="pages-carousel-button " id="next">-->
+<!--        <div class="pages-carousel-top"></div>-->
+<!--        <button>Следующая</button>-->
+<!--        <div class="pages-carousel-bottom"></div>-->
+<!--    </div>-->
+<!--</section>-->
+{% endblock content %}

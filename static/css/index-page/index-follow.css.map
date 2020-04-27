@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM",
+"sources": ["index-follow.scss"],
+"names": [],
+"file": "index-follow.css"
+}

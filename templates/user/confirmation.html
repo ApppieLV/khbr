@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block content %}
+     <div class="sign-container" style="background-image: url(../../static/img/index-banner-bgi.png);" id="sign-container-id">
+        <div class="sign-window">
+            <div class="sign-window-title"><h2>Регистрация</h2></div>
+            <div class="sign-window-google">
+                <a href="#"><span>Вход с помощью Google</span><img src="{% static 'img/Google.svg.webp' %}" alt=""></a>
+            </div>
+            <div class="sign-window-form">
+                <form action="" method="post">
+                    <p>Введите Ваш пароль:</p>
+                    <input type="text" name="user_password" class="sign-window-input" placeholder="Пароль">
+                    <p>Повторите Ваш пароль:</p>
+                    <input type="text" name="user_REpassword" class="sign-window-input" placeholder="Пароль">
+                    <button class="sign-window-next" type="submit">Далее</button>
+
+                </form>
+            </div>
+            <div class="sign-window-bottom">
+                <a href="{% url 'signin' %}" class="createAccount">Авторизируйтесь</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

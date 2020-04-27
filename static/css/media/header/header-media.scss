@@ -1,0 +1,83 @@
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    padding: 0;
+  }
+  .header-style {
+
+    .header-navigation {
+      margin-left: 0;
+      .header-navigation-item {
+        font-size: 1.6em
+      }
+    }
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 0;
+  }
+  .header-style {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .header-navigation {
+      margin-top: 1vh;
+      .header-navigation-item {
+        font-size: 1.2em;
+
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+    .header-style {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .header-navigation {
+        margin-top: 1vh;
+        .header-navigation-item {
+          font-size: 1.2em;
+
+        }
+      }
+    }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+    .container {
+      padding: 0;
+      .fa-bars {
+        font-weight: 700;
+        font-size: 2em;
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    .header-style {
+
+      .header-logo {
+        display: none;
+      }
+    }
+}
+

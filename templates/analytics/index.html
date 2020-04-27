@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+    <section class="index-banner-style wow fadeIn" id="index-banner-anchor" style="background-image: url(../../static/img/index-banner-bgi.png);">
+        <div class="index-banner-textBox">
+            <h1 class="index-banner-title wow fadeInLeft">Kharkiv business review</h1>
+        </div>
+    </section>
+<!--post table section-->
+
+<div class="page_title-box">
+    <div class="page_title-title">
+        <a href="{% url 'analytics_index' %}"> 
+            <h1>Аналитика</h1>
+        </a>
+    </div>
+</div>
+    <div class="container">
+        <section class="index-posts-style" id="index-posts-anchor">
+            <!--    post table wrapper    -->
+            <div class="index-posts-wrapper">
+                {% for article in last_art %}
+                <div class="index-post  wow fadeInDown">
+                    <a href="{% url 'article_detail' slug=article.slug %}" class="index-post-link">
+                        {% comment %}
+                        {% if article.image %}
+                            <img src="{{ article.image.url }}" alt="post image" class="index-post-image">
+                        {% endif %}
+                        {% endcomment %}
+                        <p class="index-post-title">{{ article.title }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+    </section>
+    </div>
+
+<hr>
+    <div class="container">
+        <section class="index-follow" id="index-follow-anchor" >
+            <h3 class="index-follow-title">Подпишитесь на нашу рассылку</h3>
+            <form class="index-follow-box" action="{% url 'analytics' %}" method="post">
+                {% csrf_token %}
+                {% render_field form.email class="index-follow-input" name="user_email" placeholder="Ваш e-mail: " %}
+                <button class="index-follow-button" type="submit">Подписаться</button>
+            </form>
+        </section>
+    </div>
+<hr>
+   <div class="container">
+       <section class="index-lists-style" id="post_list-1-anchor">
+           <div class="index-lists-wrapper">
+               <div class="index-list-box">
+                   <h3 class="index-list-title">Рейтинги</h3>
+                   <ul class="index-list">
+                       {% for raiting in data_rait %}
+
+                       <li class="index-list-item">
+                           <a href="{% url 'raiting_detail' slug=raiting.slug %}" class="index-list-item-link">
+                               {{ raiting.title }}
+                           </a>
+                       </li>
+                       {% endfor %}
+                   </ul>
+               </div>
+               <div class="index-list-box">
+                   <h3 class="index-list-title">Аналитика</h3>
+                   <ul class="index-list">
+                       {% for article in data_art_1_4 %}
+
+                       <li class="index-list-item">
+                           <a href="{% url 'article_detail' slug=article.slug %}" class="index-list-item-link">
+                               {{ article.title }}
+                           </a>
+                       </li>
+                       {% endfor %}
+                   </ul>
+               </div>
+           </div>
+       </section>
+   </div>
+    <hr>
+        <div class="container">
+            <section class="index-action-style wow flash" id="index-action-anchor">
+                <a href="{% url 'article_detail' slug=integer_day.slug %}" class="index-action-link">
+                    <div class="index-action-content">
+                        {{ integer_day.title }}
+                    </div>
+                </a>
+            </section>
+        </div>
+    <hr>
+   <div class="container">
+       <section class="index-lists-style" id="post_list-2-anchor">
+           <div class="index-lists-wrapper">
+               <div class="index-list-box">
+                   <h3 class="index-list-title">События</h3>
+                   <ul class="index-list">
+                       {% for event in data_event %}
+                       <li class="index-list-item">
+                           <a href="{% url 'event_detail' slug=event.slug %}" class="index-list-item-link">
+                               {{ event.title }}
+                           </a>
+                       </li>
+                       {% endfor %}
+                   </ul>
+               </div>
+               <div class="index-list-box">
+                   <h3 class="index-list-title">Аналитика</h3>
+                   <ul class="index-list">
+                       {% for article in data_art_6_9 %}
+                       <li class="index-list-item">
+                           <a href="{% url 'article_detail' slug=article.slug %}" class="index-list-item-link">
+                           {{ article.title }}
+                           </a>
+                       </li>
+                       {% endfor %}
+                   </ul>
+               </div>
+           </div>
+       </section>
+   </div>
+    <hr>
+    <div class="container">
+        <section class="index-video-style" id="index-video-anchor">
+            <div class="index-video-wrapper">
+                {% for video in data_video %}
+                <div class="index-video-box">
+                    <a href="{{ video.url }}" class="index-video-link">
+                        <iframe width="400px" height="235px" src="{{ video.video }}"
+                                frameborder="0" allow="accelerometer; autoplay;
+                        encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                        </iframe>
+                        <h3 class="index-video-title">{{ video.title }}</h3>
+
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+{% endblock content %}
+<!--adaptive + -->

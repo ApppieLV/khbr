@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% block content %}
+<button><a href="{% provider_login_url "google"%}">Google Login</a></button>
+{% endblock content %}

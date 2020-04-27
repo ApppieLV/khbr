@@ -1,0 +1,37 @@
+.header-style {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  padding: 2vh 0;
+
+  .header-logo {
+    flex-grow: 0;
+      img {
+        width: 315px;
+      }
+  }
+  .header-navigation {
+    flex-grow: 1;
+    margin-left: 24px;
+    .header-navigation-item {
+      margin: 0 16px;
+      font-size: 1.8em;
+
+    }
+
+    a {
+      text-decoration: none;
+      color:#303738;
+      &:hover {
+        color: #63808b;
+        transition: .4s;
+      }
+      &:focus {
+        color:#8b5d65;
+      }
+    }
+    .header-navigation-sign {
+      float: right;
+    }
+  }
+}

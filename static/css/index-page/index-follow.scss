@@ -1,0 +1,45 @@
+.index-follow {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 5vh 0;
+    .index-follow-title {
+        margin: 2vh 0;
+        font-size: 2em;
+    }
+    .index-follow-box {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .index-follow-input {
+            border-radius: 25px 0 0 25px;
+            border:solid 0.5px black;
+            border-right:none;
+            padding: 14px 26px;
+            margin:0;
+            outline:none;
+            text-indent: 12px;
+            width: 25%;
+        }
+        .index-follow-button {
+            border-radius: 0 25px 25px 0;
+            border:solid 0.5px #303738;
+            border-left:none;
+            background-color: #757e79;
+            margin:0;
+            padding: 14px 12px;
+            cursor:pointer;
+            font-size: 0.9em;
+            font-weight: 700;
+            outline:none;
+            &:hover {
+                background-color: #9aa39e;
+            }
+            &:active {
+                background-color: #5e6762;
+            }
+        }
+    }
+}

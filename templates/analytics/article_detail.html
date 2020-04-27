@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+    <section class="analytics-detail-style" id="analytics-detail-anchor">
+            <div class="analytics-detail-post">
+                <div class="analytics-detail-title">
+                    <h1>{{ article.title }}</h1>
+                </div>
+                {% if article.image %}
+                <div class="analytics-detail-image">
+                    <img src="{{ article.image.url }}" alt="">
+                </div>
+                {% endif %}
+                <div class="analytics-detail-info">
+                    <h3>{{ article.category }}</h3>
+                    <div class="analytics-detail-infoBox">
+                        <p class="analytics-box-author"><i class="fa fa-user"></i> {{ article.author }}</p>
+                        <p class="analytics-box-time">{{ article.created }}</p>
+                        <div class="detail-viewCount">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>{{ article.views }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-detail-content-box">
+                    {{ article.content|safe }}
+                </div>
+            </div>
+    </section>
+</div>
+{% endblock content %}

@@ -1,0 +1,43 @@
+.video-wrapper {
+  margin: 5vh 0;
+  .video-index-box {
+    .video-index-box-title {
+      a {
+      font-size: 2em;
+      color:#303738;
+        text-decoration: none;
+        &:hover {
+          transition: .4s;
+          color: #7A7A7A;
+        }
+        &:focus {
+          color:#8b5d65;
+        }
+      }
+    }
+  .video-box-info {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    color:#7A7A7A;
+    margin: 2vh 0;
+    p {
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  .video-index-box-description {
+    font-size: 1.4em;
+    text-align: left;
+    margin: 1.5vh 0;
+    p {
+      &:hover {
+        text-shadow: 1px 1px 1px #C9C9C9;
+        cursor: pointer;
+      }
+    }
+  }
+  }
+}

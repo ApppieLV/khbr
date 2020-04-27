@@ -1,0 +1,13 @@
+.navUnHide {
+  display: none;
+}
+.navHide {
+  display: block;
+}
+.navMediaMenu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

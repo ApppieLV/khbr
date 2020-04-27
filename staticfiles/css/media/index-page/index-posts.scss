@@ -1,0 +1,32 @@
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .index-posts-wrapper {
+    justify-content: center;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .index-posts-wrapper {
+    justify-content: center;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .index-posts-wrapper {
+    justify-content: center;
+  }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .index-posts-wrapper {
+    justify-content: center;
+  }
+}
+

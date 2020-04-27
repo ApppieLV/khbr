@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <section class="event-detail">
+        <div class="event-detail-detail-top">
+            <h1 class="event-detail-title">{{ data_event.title }}</h1>
+        </div>
+        {% if data_event.image %}<!--над дивом с фоткой -->
+        <div class="event-detail-publication-image">
+            <img src="{{data_event.image.url }}" alt="">
+        </div>
+        {% endif %}<!--под дивом с фоткой -->
+
+        <div class="event-detail-info">
+            <p class="event-detail-short-text"><span><i class="fa fa-calendar" aria-hidden="true"></i>{{ data_event.day }}</span></p>
+            <p class="event-detail-short-text"><span><i class="fa fa-map-marker" aria-hidden="true"></i>{{ data_event.place }}</span></p>
+
+        <p class="event-detail-short-text"><span><i class="fa fa-clock-o" aria-hidden="true"></i>Начало: {{ data_event.start_time}}</span></p>
+        <p class="event-detail-short-text"><span><i class="fa fa-ban" aria-hidden="true"></i>Конец: {{ data_event.end_time}}</span></p>
+            <div class="detail-viewCount">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <span>{{ data_event.views }}</span>
+            </div>
+        </div>
+        <p class="event-detail-paragraph">{{ data_event.content|safe }}</p>
+    </section>
+</div>
+{% endblock content %}

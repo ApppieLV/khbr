@@ -1,0 +1,40 @@
+.index-posts-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 0;
+  .index-post {
+    margin: 2vh 3vw;
+    .index-post-image {
+      width: 315px;
+      height: 20vh;
+      &:hover {
+        -webkit-box-shadow: 1px 1px 5px 1px #7A7A7A;
+        box-shadow: 1px 1px 5px 3px #7A7A7A;
+      }
+    }
+    .index-post-title {
+      font-size: 1.5em;
+      margin: 0.5vh 0;
+      &:hover {
+        color: #63808b;
+        transition: .4s;
+      }
+
+    }
+    .index-post-link {
+      color:#303738;
+      text-decoration: none;
+
+    }
+  }
+}
+.page_title-box {
+  .page_title-title {
+    a {
+      color:#303738;
+      text-decoration: none;
+    }
+  }
+}

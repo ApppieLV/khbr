@@ -1,0 +1,68 @@
+{% load staticfiles %}
+
+<footer class="footer-style" id="footer-anchor">
+    <div class="footer-wrapper">
+        <ul class="footer-list wow fadeInLeft">
+            <li class="footer-list-item">
+                <a href="{% url 'analytics_index' %}" class="footer-link">
+                    Аналитика
+                </a>
+            </li>
+            <li class="footer-list-item">
+                <a href="{% url 'events' %}" class="footer-link">
+                    События
+                </a>
+            </li>
+            <li class="footer-list-item">
+                <a href="{% url 'raitings' %}" class="footer-link">
+                    Рейтинги
+                </a>
+            </li>
+            <li class="footer-list-item">
+                <a href="{% url 'videooverviews' %}" class="footer-link">
+                    Видеообзоры
+                </a>
+            </li>
+        </ul>
+        <div class="footer-logo wow fadeIn">
+        <a href="{% url 'analytics' %}" class="footer-logo-link">
+                <img src="{% static 'img/logo.png' %}" alt="">
+        </a>
+        </div>
+        
+        <ul class="footer-list wow fadeInRight">
+            <li class="footer-list-item">
+                <a class="footer-link">
+                    Мы в соцсетях
+                </a>
+            </li>
+            <li class="footer-list-item" >
+                <a href="https://www.facebook.com/KhBusinessReview/" class="footer-link">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCFOkaFk_FxafZg3T8nqR9sA/featured?view_as=subscriber" class="footer-link">
+                <i class="fa fa-youtube-square"></i>
+                </a>
+                <a href="https://linkedin.com/showcase/khbr" class="footer-link">
+                <i class="fa fa-linkedin-square"></i>
+                </a>
+                <a href="https://instagram.com/kh_business_review/" class="footer-link">
+                <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://t.me/KH_business" class="footer-link">
+                <i class="fa fa-telegram"></i>
+                </a>
+            </li>
+            <!--<li class="footer-list-item">
+                <a href="#" class="footer-link">
+                    Обратная связь
+                </a>
+            </li>
+            <li class="footer-list-item">
+                <a href="#" class="footer-link">
+                    Контакты
+                </a>
+            </li>-->
+        </ul>
+    </div>
+</footer>
